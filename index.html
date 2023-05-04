@@ -11,15 +11,21 @@
     <h2>Hello world</h2>
     
     <div id="app">
-        <p>{{ title }} - {{ author }} - {{ age }}</h2>
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div>
         
-        <!-- v-on is a directive for certain events in vue -->
-        <button v-on:click ="age++">Increase age </button>
-        <button v-on:click ="age--">Decrease age </button>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+            <!-- <span v-if="!showBooks">Show Books</span> -->
+            <!-- <span v-if="showBooks === false">Show Books</span> -->
+        </button>
 
-        <!-- a shortcut to relace v-on is @ -->
-        <div @click="changeTitle('Price of life')">Change book title</div>
-
+        <br>
+        <br>
+        
+        <div v-show="showBooks">Currently showing books</div>
     </div>
 
     <script src="app.js"> </script>
