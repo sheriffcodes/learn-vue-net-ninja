@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>laarn vue</title>
+    <title>Learn Vue</title>
+    <style>
+        .box {
+            padding:100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <h2>Hello world</h2>
@@ -18,14 +28,16 @@
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
             <span v-else>Show Books</span>
-            <!-- <span v-if="!showBooks">Show Books</span> -->
-            <!-- <span v-if="showBooks === false">Show Books</span> -->
         </button>
 
         <br>
-        <br>
-        
-        <div v-show="showBooks">Currently showing books</div>
+
+        <!-- mouse events -->
+        <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
+        <div class="box" @mouseleave="handleEvent($event, 555)">mouseleave</div>
+        <div class="box" @dbclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">Position - {{ x }} {{ y }}</div>
+
     </div>
 
     <script src="app.js"> </script>
