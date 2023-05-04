@@ -5,7 +5,14 @@ const app = Vue.createApp({
             author: "Adewole",
             age: 45
         }
+    },
+    methods: {
+        changeTitle(newTitle) {
+            // this.title = "Price of life"
+            this.title = newTitle
+        }
     }
+
 })
 
 app.mount('#app')

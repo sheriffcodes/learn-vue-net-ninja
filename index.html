@@ -12,9 +12,16 @@
     
     <div id="app">
         <p>{{ title }} - {{ author }} - {{ age }}</h2>
+        
+        <!-- v-on is a directive for certain events in vue -->
+        <button v-on:click ="age++">Increase age </button>
+        <button v-on:click ="age--">Decrease age </button>
+
+        <!-- a shortcut to relace v-on is @ -->
+        <div @click="changeTitle('Price of life')">Change book title</div>
 
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js"> </script>
 </body>
 </html>
