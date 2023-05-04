@@ -2,27 +2,16 @@ const app = Vue.createApp({
     data() {
         return {
             showBooks: true,
-            title: 'The final empire',
-            author: "Adewole",
-            age: 45,
-            x: 0,
-            y: 0
+            books: [
+                {title: "windy moon", author: "Omobola"},
+                {title: "Kings way", author: "Adewolu"},
+                {title: "Final empire", author: "Oladoja"}
+            ]
         }
     },
     methods: {
-        toggleShowBooks(){
-            this.showBooks = !showBooks
-        },
-        // outputting the event object and also trying a direct argument(data)
-        handleEvent(e, data) {
-            console.log(e, e.type)
-            if(data) {
-                console.log(data)
-            }
-        },
-        handleMouseMove(e) {
-            this.x = e.offsetX
-            this.y = e.offsetY
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks
         }
     }
 

@@ -22,21 +22,21 @@
     
     <div id="app">
         <div v-if="showBooks">
-            <p>{{ title }} - {{ author }} - {{ age }}</p>
+            <!-- <p>{{ books[0].title }} - {{ books[0].author }}</p> -->
+            <div>
+                <ul>
+                    <li v-for="item in books">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.author }}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
         
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
             <span v-else>Show Books</span>
         </button>
-
-        <br>
-
-        <!-- mouse events -->
-        <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
-        <div class="box" @mouseleave="handleEvent($event, 555)">mouseleave</div>
-        <div class="box" @dbclick="handleEvent">double click</div>
-        <div class="box" @mousemove="handleMouseMove">Position - {{ x }} {{ y }}</div>
 
     </div>
 
