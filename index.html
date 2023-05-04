@@ -21,11 +21,19 @@
     <h2>Hello world</h2>
     
     <div id="app">
+
+        <!-- attribute binding -->
+        <a v-bind:href="url">best websites ever</a>
+        <br>
+        <!-- shortcut -->
+        <a :href="url">best websites ever</a>
+
         <div v-if="showBooks">
-            <!-- <p>{{ books[0].title }} - {{ books[0].author }}</p> -->
             <div>
                 <ul>
                     <li v-for="item in books">
+                        <!-- img-link -->
+                        <img :src="item.img" :alt="item.title">
                         <h3>{{ item.title }}</h3>
                         <p>{{ item.author }}</p>
                     </li>
