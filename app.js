@@ -4,9 +4,9 @@ const app = Vue.createApp({
             url: "https://google.com",
             showBooks: true,
             books: [
-                {title: "windy moon", author: "Omobola", img: "assets/1.jpg"},
-                {title: "Kings way", author: "Adewolu", img: "assets/2.jpg"},
-                {title: "Final empire", author: "Oladoja", img: "assets/3.jpg"}
+                {title: "windy moon", author: "Omobola", img: "assets/1.jpg", isFav: true},
+                {title: "Kings way", author: "Adewolu", img: "assets/2.jpg", isFav: false},
+                {title: "Final empire", author: "Oladoja", img: "assets/3.jpg", isFav: true}
             ]
         }
     },
